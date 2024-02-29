@@ -10,6 +10,7 @@ import Imagenew from "../assets/Image new.png";
 import Fish from "../assets/Fish.png";
 import RitterSport from "../assets/Ritter Sport.png";
 import Nike from "../assets/Nike.png";
+import imageCard from "../assets/Imagecard.png";
 import Adidas from "../assets/Adidas.png";
 import NewHolland from "../assets/New Holland.png";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
@@ -18,11 +19,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Homepage = () => {
   const [showCategories, setShowCategories] = useState(false);
 
-  const categories = ["Category 1", "Category 2", "Category 3"];
+  const categories = ["Auction", "NFTs", "Roadmaps"];
 
   const toggleCategories = () => {
     setShowCategories(!showCategories);
   };
+
+  //Sorry i am still working on my TailwindCSS skills, i am not so comfortable with it yet considering the amount of time given to complete the task.
 
   return (
     <div>
@@ -31,15 +34,15 @@ const Homepage = () => {
         <img
           src={Square02}
           alt="Square"
-          className="float-left mr-4 lg:mr-14 w-1/10 lg:w-1/12"
+          className=" float-left mr-4 lg:mr-14 w-1/10 lg:w-1/12"
           style={{ marginTop: "6rem" }}
         />
       </div>
 
       <div className="flex justify-center items-center mt-8 lg:mt-12 ">
-        <div className="flex items-center">
+        <div className="flex items-center justify-start ml-4 !important">
           <div>
-            <p className="text-white text-sm">NON FUNGIBLE TOKENS</p>
+            <p className="text-white text-sm ml-4">NON FUNGIBLE TOKENS</p>
 
             <h1 className="text-white text-4xl">A new NFT</h1>
           </div>
@@ -47,7 +50,7 @@ const Homepage = () => {
         </div>
       </div>
       <div className="flex justify-center items-center mt-4 lg:mt-8 ">
-        <div className="flex items-center">
+        <div className="flex items-center ml-4">
           <img src={Frame2} alt="Frame" />
           <div className="mx-2"></div>
           <h1 className="text-white text-4xl">Experience</h1>
@@ -92,7 +95,7 @@ const Homepage = () => {
           src={Imagenew}
           alt="Imagenew"
           className="float-right mr-4 lg:mr-14 w-1/20 lg:w-24"
-          style={{ marginRight: "48rem", marginTop: "-10px" }}
+          style={{ marginRight: "48rem", marginTop: "-200px" }}
         />
       </div>
       <div>
@@ -124,6 +127,27 @@ const Homepage = () => {
           alt="NewHolland"
           className="w-1/8 lg:w-1/10 mx-0.5"
         />
+      </div>
+      <h2 className="text-white mt-12 ">Latest Live auctions</h2>
+
+      <div className="bg-white rounded shadow-md p-2">
+        <img
+          src={imageCard}
+          alt="imageCard"
+          className="w-32 h-auto rounded-t"
+        />
+        <div className="mt-2">
+          <div className="flex justify-between items-center">
+            <span className="text-white font-bold">
+              Dui Accumsan sfs ddhdgtdg
+            </span>
+            <span className="text-white">1.1 ETH</span>
+          </div>
+          <div className="flex justify-between items-center mt-1">
+            <span className="text-white">Clock</span>
+            <span className="text-white">22:59 min left</span>
+          </div>
+        </div>
       </div>
     </div>
   );
